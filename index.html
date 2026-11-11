@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8f5f0"><title>শখের ঝুড়ি — নিজের মতো ফ্যাশন</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--ink:#25231f;--muted:#77736d;--paper:#f8f5f0;--white:#fff;--accent:#8c563e;--line:#e9e2d9}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Hind Siliguri',sans-serif}button,input,select{font:inherit}button{cursor:pointer}.top{background:#292722;color:#fff;text-align:center;padding:8px;font-size:13px}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;background:#fff;position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line)}.brand{font-size:26px;font-weight:700;letter-spacing:-1px}.brand small{display:block;font-size:11px;letter-spacing:2px;color:var(--accent);font-weight:500;margin-top:-5px}.navlinks{display:flex;gap:25px}.navlinks a{color:var(--ink);text-decoration:none;font-size:14px}.actions{display:flex;gap:10px}.pill{border:1px solid var(--line);background:white;padding:9px 14px;border-radius:30px}.hero{margin:22px auto;max-width:1400px;padding:0 4%;}.hero-inner{min-height:430px;border-radius:5px;background:linear-gradient(90deg,rgba(28,25,22,.76),rgba(28,25,22,.05)),url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85') center/cover;display:flex;align-items:center;color:white;padding:7%}.hero-copy{max-width:470px}.eyebrow{letter-spacing:3px;font-size:12px;text-transform:uppercase}.hero h1{font-size:clamp(38px,6vw,66px);line-height:1.13;margin:15px 0}.hero p{font-size:17px;color:#f1ece5}.cta{background:var(--accent);color:white;border:0;padding:13px 24px;border-radius:2px;margin-top:12px}.section{max-width:1280px;margin:65px auto;padding:0 5%}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.section h2{font-size:30px;margin:0}.section-head p{color:var(--muted);margin:4px 0}.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.cat{height:240px;position:relative;overflow:hidden;background:#ddd}.cat img{width:100%;height:100%;object-fit:cover;transition:.4s}.cat:hover img{transform:scale(1.04)}.cat span{position:absolute;bottom:18px;left:18px;color:#fff;font-size:23px;text-shadow:0 1px 5px #222}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.product{background:#fff}.product img{width:100%;height:280px;object-fit:cover;background:#eee}.pinfo{padding:13px}.pinfo h3{font-size:16px;margin:0 0 5px}.price{font-weight:700;color:var(--accent)}.old{color:#999;text-decoration:line-through;font-size:13px;margin-left:7px}.add{width:100%;margin-top:10px;border:1px solid var(--ink);background:#fff;padding:9px}.add:hover{background:var(--ink);color:#fff}.banner{background:#e9ded2;text-align:center;padding:48px 15px;margin:60px 0}.banner h2{font-size:32px;margin:0}.footer{background:#282722;color:#eee;padding:45px 6%;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.footer p,.footer a{color:#c9c4bc;font-size:14px}.modal{display:none;position:fixed;inset:0;background:#0008;z-index:20;align-items:center;justify-content:center;padding:15px}.panel{background:#fff;width:min(560px,100%);max-height:90vh;overflow:auto;padding:24px;border-radius:6px}.panel h2{margin-top:0}.close{float:right;border:0;background:none;font-size:24px}.field{width:100%;padding:11px;border:1px solid var(--line);margin:6px 0 13px}.cartrow{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:10px 0}.adminlink{font-size:12px;color:#bbb}.empty{text-align:center;color:var(--muted);padding:25px}.badge{background:var(--accent);color:white;border-radius:20px;padding:2px 7px;font-size:11px}
+@media(max-width:800px){.nav{padding:0 4%;height:66px}.navlinks{display:none}.hero-inner{min-height:390px}.categories{grid-template-columns:1fr 1fr}.cat{height:180px}.products{grid-template-columns:repeat(2,1fr);gap:12px}.product img{height:210px}.section{margin:42px auto}.footer{grid-template-columns:1fr 1fr}.footer>div:first-child{grid-column:1/-1}}
+</style></head>
+<body>
+<div class="top">সারা বাংলাদেশে ডেলিভারি • নতুন কালেকশনে ১০% ছাড়</div>
+<header class="nav"><div class="brand">শখের ঝুড়ি<small>নিজের মতো ফ্যাশন</small></div><nav class="navlinks"><a href="#home">হোম</a><a href="#categories">ক্যাটাগরি</a><a href="#products">শপ</a><a href="#footer">যোগাযোগ</a></nav><div class="actions"><button class="pill" onclick="openCart()">ব্যাগ <span id="count">0</span></button></div></header>
+<main id="home">
+<section class="hero"><div class="hero-inner"><div class="hero-copy"><div class="eyebrow">STYLE YOUR EVERYDAY</div><h1>নিজের মতো করে<br>সাজুন প্রতিদিন</h1><p>আপনার পছন্দ, আপনার স্টাইল। বেছে নিন শখের ঝুড়ির নতুন ফ্যাশন কালেকশন।</p><button class="cta" onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">এখনই শপিং করুন →</button></div></div></section>
+<section class="section" id="categories"><div class="section-head"><div><h2>ক্যাটাগরি</h2><p>আপনার পছন্দের কালেকশন খুঁজে নিন</p></div></div><div class="categories">
+<div class="cat"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80"><span>নারীদের ফ্যাশন</span></div>
+<div class="cat"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80" onerror="this.src='https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80'"><span>নতুন কালেকশন</span></div>
+<div class="cat"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80"><span>ক্যাজুয়াল স্টাইল</span></div></div></section>
+<section class="section" id="products"><div class="section-head"><div><h2>জনপ্রিয় পণ্য</h2><p>স্টাইলিশ পছন্দ, সাধ্যের মধ্যে</p></div><span class="badge">NEW ARRIVALS</span></div><div class="products" id="productGrid"></div></section>
+<div class="banner"><h2>ফ্যাশন হোক নিজের মতো</h2><p>শখের ঝুড়ির সাথে প্রতিটি দিন হোক একটু বেশি রঙিন।</p></div>
+</main>
+<footer class="footer" id="footer"><div><div class="brand">শখের ঝুড়ি</div><p>নিজের মতো ফ্যাশন। আপনার প্রতিদিনের স্টাইলের বিশ্বস্ত ঠিকানা।</p></div><div><b>কাস্টমার সার্ভিস</b><p>অর্ডার ও ডেলিভারি</p><p>রিটার্ন পলিসি</p></div><div><b>যোগাযোগ</b><p>ফোন: 01XXXXXXXXX</p><p>Facebook: আপনার পেজের লিংক</p><a class="adminlink" href="#" onclick="adminLogin();return false">Admin</a></div></footer>
+<div class="modal" id="cartModal"><div class="panel"><button class="close" onclick="closeModal('cartModal')">×</button><h2>আপনার শপিং ব্যাগ</h2><div id="cartItems"></div><h3 id="total"></h3><button class="cta" onclick="checkout()">অর্ডার সম্পন্ন করুন</button></div></div>
+<div class="modal" id="checkoutModal"><div class="panel"><button class="close" onclick="closeModal('checkoutModal')">×</button><h2>ডেলিভারি তথ্য</h2><form id="orderForm"><input class="field" name="name" placeholder="আপনার নাম" required><input class="field" name="phone" placeholder="মোবাইল নম্বর" required><textarea class="field" name="address" placeholder="সম্পূর্ণ ঠিকানা" required></textarea><select class="field" name="payment"><option>Cash on Delivery</option><option>bKash (ম্যানুয়াল কনফার্মেশন)</option><option>Nagad (ম্যানুয়াল কনফার্মেশন)</option></select><button class="cta" type="submit">অর্ডার কনফার্ম</button></form><p id="orderMsg"></p></div></div>
+<div class="modal" id="adminModal"><div class="panel">
+<button class="close" onclick="closeModal('adminModal')">×</button>
+<h2>Admin Panel</h2>
+<div id="adminLoginBox">
+<p>Admin Email, Password ও PIN দিয়ে প্রবেশ করুন। প্রথমবার PIN সেট করতে হবে (৪–৮ সংখ্যা)।</p>
+<form id="adminLoginForm">
+<input class="field" id="adminEmail" type="email" placeholder="Admin Email" required>
+<input class="field" id="adminPassword" type="password" placeholder="Password" required>
+<input class="field" id="adminPin" type="password" inputmode="numeric" minlength="4" maxlength="8" placeholder="Admin PIN (৪–৮ সংখ্যা)" required>
+<button class="cta" type="submit">Login</button>
+</form>
+<div id="adminLoginMsg"></div>
+</div>
+<div id="adminDashboard" style="display:none">
+<p id="adminWelcome"></p>
+<h3>নতুন পণ্য যোগ করুন</h3>
+<input class="field" id="newName" placeholder="পণ্যের নাম">
+<input class="field" id="newPrice" type="number" min="1" placeholder="দাম (৳)">
+<input class="field" id="newImage" type="url" placeholder="ছবির URL (https://...)">
+<button class="cta" onclick="addProduct()">পণ্য যোগ করুন</button>
+<div id="adminMsg"></div>
+<h3>পণ্য পরিচালনা</h3><div id="adminProducts"></div>
+<h3>সকল অর্ডার</h3><div id="adminOrders"></div>
+<button class="pill" onclick="adminLogout()">Logout</button>
+</div></div></div></div>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyBADRfscBVd97sF6YSIQJ8O29v8xoYTHk0",
+  authDomain: "shokher-jhuri.firebaseapp.com",
+  projectId: "shokher-jhuri",
+  storageBucket: "shokher-jhuri.firebasestorage.app",
+  messagingSenderId: "201086170134",
+  appId: "1:201086170134:web:e6a4e4c462125443daf137",
+  measurementId: "G-NNK6E7ZRZH"
+};
+const ADMIN_UID = "Plfhfz4HI1UgZm2ujRFuSgNTLLY2";
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+const defaults=[
+ {name:'এলিগ্যান্ট কুর্তি',price:1250,img:'https://images.unsplash.com/photo-1583391733956-6c78276477e3?auto=format&fit=crop&w=700&q=80'},
+ {name:'ক্যাজুয়াল ড্রেস',price:1490,img:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80'},
+ {name:'স্টাইলিশ হ্যান্ডব্যাগ',price:990,img:'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80'},
+ {name:'প্রিমিয়াম শাড়ি',price:2250,img:'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80'}
+];
+let products=defaults.map((p,i)=>({...p,id:'default-'+i})), cart=JSON.parse(localStorage.getItem('sj_cart')||'[]');
+let currentAdmin=null, adminVerified=false, productsUnsub=null, ordersUnsub=null;
+
+function escapeHTML(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function saveCart(){localStorage.setItem('sj_cart',JSON.stringify(cart));}
+function render(){
+ document.getElementById('productGrid').innerHTML=products.map(p=>`<article class="product"><img src="${escapeHTML(p.img)}" alt="${escapeHTML(p.name)}" onerror="this.src='https://placehold.co/600x700?text=Product'"><div class="pinfo"><h3>${escapeHTML(p.name)}</h3><span class="price">৳ ${Number(p.price).toLocaleString('en-BD')}</span><button class="add" onclick="addCart('${String(p.id).replace(/'/g,"\\'")}')">ব্যাগে যোগ করুন +</button></div></article>`).join('');
+ document.getElementById('count').textContent=cart.reduce((a,b)=>a+b.qty,0);
+}
+function addCart(id){let p=products.find(x=>x.id===id);if(!p)return;let x=cart.find(x=>x.id===id);if(x)x.qty++;else cart.push({...p,qty:1});saveCart();render();}
+function openCart(){
+ document.getElementById('cartItems').innerHTML=cart.length?cart.map((p,i)=>`<div class="cartrow"><span>${escapeHTML(p.name)} × ${p.qty}</span><span>৳${Number(p.price)*p.qty} <button onclick="cart.splice(${i},1);saveCart();openCart();render()">×</button></span></div>`).join(''):'<div class="empty">আপনার ব্যাগ এখনো খালি।</div>';
+ document.getElementById('total').textContent='মোট: ৳ '+cart.reduce((a,b)=>a+Number(b.price)*b.qty,0);document.getElementById('cartModal').style.display='flex';
+}
+function checkout(){if(!cart.length){alert('আগে পণ্য যোগ করুন');return;}closeModal('cartModal');document.getElementById('checkoutModal').style.display='flex';}
+function closeModal(id){document.getElementById(id).style.display='none';}
+document.getElementById('orderForm').onsubmit=async e=>{
+ e.preventDefault();if(!cart.length){alert('আপনার ব্যাগ খালি');return;}
+ const btn=e.target.querySelector('button[type="submit"]');btn.disabled=true;
+ try{
+  const d=Object.fromEntries(new FormData(e.target));
+  const items=cart.map(({id,name,price,img,qty})=>({productId:id,name,price:Number(price),img,qty}));
+  const total=items.reduce((a,b)=>a+b.price*b.qty,0);
+  await db.collection('orders').add({customer:d,items,total,status:'Pending',createdAt:firebase.firestore.FieldValue.serverTimestamp()});
+  cart=[];saveCart();render();e.target.reset();
+  document.getElementById('orderMsg').textContent='ধন্যবাদ! আপনার অর্ডার সফলভাবে গ্রহণ করা হয়েছে।';
+ }catch(err){console.error(err);document.getElementById('orderMsg').textContent='অর্ডার পাঠানো যায়নি: '+err.message;}
+ finally{btn.disabled=false;}
+};
+function adminLogin(){document.getElementById('adminModal').style.display='flex';document.getElementById('adminLoginBox').style.display=currentAdmin?'none':'block';document.getElementById('adminDashboard').style.display=adminVerified?'block':'none';}
+document.getElementById('adminLoginForm').onsubmit=async e=>{
+ e.preventDefault();const email=document.getElementById('adminEmail').value.trim(),pass=document.getElementById('adminPassword').value,pin=document.getElementById('adminPin').value;
+ const msg=document.getElementById('adminLoginMsg');msg.textContent='যাচাই হচ্ছে...';
+ if(!/^\\d{4,8}$/.test(pin)){msg.textContent='PIN অবশ্যই ৪–৮ সংখ্যার হতে হবে।';return;}
+ try{
+  let cred=auth.currentUser?{user:auth.currentUser}:await auth.signInWithEmailAndPassword(email,pass);
+  if(cred.user.uid!==ADMIN_UID){await auth.signOut();throw new Error('এই Email Admin হিসেবে অনুমোদিত নয়।');}
+  const saved=localStorage.getItem('sj_admin_pin_hash');
+  const hash=await hashPIN(pin);
+  if(saved && saved!==hash){await auth.signOut();throw new Error('ভুল Admin PIN।');}
+  if(!saved)localStorage.setItem('sj_admin_pin_hash',hash);
+  currentAdmin=cred.user;adminVerified=true;
+  document.getElementById('adminLoginBox').style.display='none';document.getElementById('adminDashboard').style.display='block';
+  document.getElementById('adminWelcome').textContent='Admin হিসেবে লগইন করেছেন।';
+  await seedDefaultsIfEmpty();startAdminListeners();
+ }catch(err){msg.textContent=err.message;}
+};
+async function hashPIN(pin){const bytes=new TextEncoder().encode(pin);const digest=await crypto.subtle.digest('SHA-256',bytes);return Array.from(new Uint8Array(digest)).map(b=>b.toString(16).padStart(2,'0')).join('');}
+async function seedDefaultsIfEmpty(){
+ const snap=await db.collection('products').limit(1).get();
+ if(snap.empty){const batch=db.batch();defaults.forEach(p=>batch.set(db.collection('products').doc(),{...p,createdAt:firebase.firestore.FieldValue.serverTimestamp()}));await batch.commit();}
+}
+function startAdminListeners(){
+ if(productsUnsub)productsUnsub();if(ordersUnsub)ordersUnsub();
+ productsUnsub=db.collection('products').onSnapshot(s=>{products=s.docs.map(d=>({id:d.id,...d.data()}));render();renderAdminProducts();},e=>showAdminError(e));
+ ordersUnsub=db.collection('orders').orderBy('createdAt','desc').onSnapshot(s=>renderOrders(s.docs),e=>showAdminError(e));
+}
+function showAdminError(e){document.getElementById('adminMsg').textContent='ডেটা লোড সমস্যা: '+e.message;}
+function renderAdminProducts(){
+ const el=document.getElementById('adminProducts');if(!el)return;
+ el.innerHTML=products.map(p=>`<div class="cartrow"><span>${escapeHTML(p.name)} — ৳${Number(p.price)}</span><span><button onclick="editProduct('${p.id}')">Edit</button> <button onclick="deleteProduct('${p.id}')">Delete</button></span></div>`).join('')||'<p>কোনো পণ্য নেই।</p>';
+}
+async function addProduct(){
+ const name=document.getElementById('newName').value.trim(),price=Number(document.getElementById('newPrice').value),img=document.getElementById('newImage').value.trim();
+ if(!name||!Number.isFinite(price)||price<=0||!img.toLowerCase().startsWith('https://')){alert('সঠিক নাম, দাম ও https ছবির URL দিন।');return;}
+ try{await db.collection('products').add({name,price,img,createdAt:firebase.firestore.FieldValue.serverTimestamp()});document.getElementById('newName').value='';document.getElementById('newPrice').value='';document.getElementById('newImage').value='';document.getElementById('adminMsg').textContent='পণ্য যোগ হয়েছে।';}
+ catch(e){showAdminError(e);}
+}
+async function editProduct(id){const p=products.find(x=>x.id===id);if(!p)return;const name=prompt('পণ্যের নাম',p.name);if(name===null)return;const price=Number(prompt('নতুন দাম',p.price));if(!name.trim()||!Number.isFinite(price)||price<=0){alert('তথ্য সঠিক নয়');return;}const img=prompt('ছবির URL',p.img);if(img===null)return;try{await db.collection('products').doc(id).update({name:name.trim(),price,img:img.trim()});}catch(e){showAdminError(e);}}
+async function deleteProduct(id){if(!confirm('এই পণ্যটি মুছে ফেলবেন?'))return;try{await db.collection('products').doc(id).delete();}catch(e){showAdminError(e);}}
+function renderOrders(docs){
+ const el=document.getElementById('adminOrders');if(!el)return;
+ el.innerHTML=docs.map(d=>{const o=d.data(),customer=o.customer||{};return `<div style="border:1px solid var(--line);padding:12px;margin:10px 0"><b>${escapeHTML(customer.name)} — ${escapeHTML(customer.phone)}</b><p>${escapeHTML(customer.address)}</p><p>${(o.items||[]).map(x=>`${escapeHTML(x.name)} × ${x.qty}`).join(', ')}</p><b>মোট: ৳${Number(o.total||0)}</b><p>Status: ${escapeHTML(o.status||'Pending')}</p><button onclick="updateOrderStatus('${d.id}','Processing')">Processing</button> <button onclick="updateOrderStatus('${d.id}','Delivered')">Delivered</button></div>`;}).join('')||'<p>এখনো কোনো অর্ডার নেই।</p>';
+}
+async function updateOrderStatus(id,status){try{await db.collection('orders').doc(id).update({status});}catch(e){showAdminError(e);}}
+async function adminLogout(){adminVerified=false;currentAdmin=null;if(productsUnsub)productsUnsub();if(ordersUnsub)ordersUnsub();productsUnsub=ordersUnsub=null;await auth.signOut();document.getElementById('adminDashboard').style.display='none';document.getElementById('adminLoginBox').style.display='block';document.getElementById('adminLoginMsg').textContent='Logout হয়েছে।';}
+auth.onAuthStateChanged(user=>{currentAdmin=user&&user.uid===ADMIN_UID?user:null;if(user&&user.uid!==ADMIN_UID)auth.signOut();});
+db.collection('products').onSnapshot(s=>{
+ if(s.empty){products=defaults.map((p,i)=>({...p,id:'default-'+i}));}
+ else{products=s.docs.map(d=>({id:d.id,...d.data()}));}
+ render();
+},e=>{console.error('Products load error:',e);});
+render();
+</script></body></html>
